@@ -33,7 +33,7 @@ Para rodar o projeto você vai precisar de
 Clone o repositório utilizando o comando
 
 ```bash
-git clone your-project-url-in-github
+git clone https://github.com/luizgmelo/sistema-cadastro-pet.git
 ```
 
 <h3>Rodando a aplicação</h3>
