@@ -48,10 +48,12 @@ mvn springboot:run
 
 <h2 id="routes">📍 API Endpoints</h2>
 
-| rota                  | descrição                                          
-|-----------------------|-----------------------------------------------------
-| <kbd>GET /pets</kbd>  | lista os pets cadastrados no sistema [response details](#list-pet-details)
-| <kbd>POST /pets</kbd> | cadastra um novo pet [request details](#add-pet)
+| rota                                           | descrição                                          
+|------------------------------------------------|-----------------------------------------------------
+| <kbd>GET /pets</kbd>                           | lista os pets cadastrados no sistema [ver detalhes](#list-pet-details)
+| <kbd>GET /pets/?tipo=?nome=?peso=?idade=</kbd> | buscar dados de pets cadastrados [ver detalhes](#search-pet)
+| <kbd>POST /pets</kbd>                          | cadastra um novo pet [ver detalhes](#add-pet)
+| <kbd>DELETE /pets/{id}</kbd>                   | deletar um pet cadastrado [ver detalhes](#delete-pet)
 
 <h3 id="list-pet-details">GET /pets</h3>
 
@@ -74,6 +76,19 @@ mvn springboot:run
 ]
 ```
 
+<h3 id="list-pet-details">GET /pets/{id}</h3>
+
+**RESPONSE**
+
+```json
+  {
+      "nome": "Scooby",
+      "tipo": "CACHORRO",
+      "idade": 12,
+      "peso": 12.42
+  }
+```
+
 <h3 id="add-pet">POST /pets</h3>
 
 **REQUEST**
@@ -90,5 +105,14 @@ mvn springboot:run
 ```json
 {
   "message": "Cadastro realizado com sucesso"
+}
+```
+
+<h3 id="add-pet">DELETE /pets/{id}</h3>
+
+**RESPONSE**
+```json
+{
+  "message": "Pet removido com sucesso"
 }
 ```
