@@ -21,12 +21,12 @@ public class Pet {
     private UUID id;
 
     @Column(nullable = false)
-    private String name;
+    private String nome;
 
     @Enumerated(EnumType.STRING)
-    private PetType type;
+    private PetType tipo;
 
-    private int age;
+    private int idade;
 
-    private double weight;
+    private double peso;
 }
